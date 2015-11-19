@@ -1,7 +1,6 @@
 module TrixEditor
   include ActionView::Helpers::TagHelper
   include ActionView::Helpers::FormTagHelper
-  cattr_accessor(:id, instance_accessor: false) { 0 }
 
   def trix_editor_tag(name, value = nil, options = {})
     options.symbolize_keys!
@@ -10,7 +9,7 @@ module TrixEditor
 
     attributes[:autofocus] = true if options[:autofocus]
     attributes[:placeholder] = options[:placeholder] if options[:placeholder]
-    attributes[:input] = options[:input] || "trix_input_#{TrixEditor.id += 1}"
+    attributes[:input] = options[:input] || "trix_input"
     attributes[:toolbar] = options[:toolbar] if options[:toolbar]
 
     editor_tag = content_tag('trix-editor', '', attributes)
