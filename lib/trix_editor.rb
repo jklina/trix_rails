@@ -8,9 +8,8 @@ module TrixEditor
     attributes = { class: "formatted_content #{options[:class]}".squish }
 
     attributes[:autofocus] = true if options[:autofocus]
-    attributes[:placeholder] = options[:placeholder] if options[:placeholder]
-    attributes[:input] = options[:input] || "trix_input"
-    attributes[:toolbar] = options[:toolbar] if options[:toolbar]
+    attributes[:placeholder] = options[:placeholder]
+    attributes[:input] = options.fetch(:input) { "trix_input" }
 
     editor_tag = content_tag('trix-editor', '', attributes)
     input_tag = hidden_field_tag(name, value, id: attributes[:input])
