@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    trix_editor_helper (0.0.1)
+    trix_editor_helper (0.0.12)
       rails (>= 4.1)
 
 GEM
@@ -55,7 +55,7 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
-    mime-types (2.6.2)
+    mime-types (2.99)
     mini_portile (0.6.2)
     minitest (5.8.3)
     minitest-rails (2.2.0)
