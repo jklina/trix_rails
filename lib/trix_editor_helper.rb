@@ -1,6 +1,9 @@
 module TrixEditorHelper
   include ActionView::Helpers::TagHelper
   include ActionView::Helpers::FormTagHelper
+  class Engine < ::Rails::Engine
+    isolate_namespace Blorgh
+  end
 
   def trix_editor_tag(name, value = nil, options = {})
     options.symbolize_keys!
