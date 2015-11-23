@@ -6,7 +6,9 @@ class Post
 
   attr_accessor :body, :summary
 
-  def initialize()
+  def initialize(body: nil, summary: nil)
+    self.body = body
+    self.summary = summary
   end
 
   def persisted?

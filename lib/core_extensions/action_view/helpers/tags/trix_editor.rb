@@ -2,18 +2,25 @@ module ActionView
   module Helpers
     module Tags
       class TrixEditor < Base
-        #TODO Reference this absolutely
-        include TrixEditorHelper
         delegate :dom_id, to: ActionView::RecordIdentifier
 
         def render
           options = @options.stringify_keys
           add_default_name_and_id(options)
           options['input'] ||= generate_trix_unique_id
-          # Delete name so it doesn't get passed in the options hash
-          trix_editor_tag(options.delete('name'),
-                          value_before_type_cast(object),
-                          options)
+          name = options.delete('name')
+          value = value_before_type_cast(object)
+          options.symbolize_keys!
+
+          attributes = { class: "formatted_content #{options[:class]}".squish }
+          attributes[:autofocus] = true if options[:autofocus]
+          attributes[:placeholder] = options[:placeholder]
+          attributes[:input] = options.fetch(:input) { "trix_input" }
+
+          editor_tag = content_tag('trix-editor', '', attributes)
+          input_tag = hidden_field_tag(name, value, id: attributes[:input])
+
+          editor_tag + input_tag
         end
 
         private
