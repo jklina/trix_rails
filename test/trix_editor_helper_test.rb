@@ -1,7 +1,8 @@
 require 'test_helper'
 
-class TrixEditorTest < ActiveSupport::TestCase
-  include TrixEditor
+class TrixEditorHelperTest < ActiveSupport::TestCase
+  include TrixEditorHelper
+
   test "#text_editor_tag returns proper trix tag" do
     html = trix_editor_tag(:test)
     assert_equal html, '<trix-editor class="formatted_content" input="trix_input"></trix-editor><input type="hidden" name="test" id="trix_input" />'

@@ -13,7 +13,7 @@ require File.expand_path('../boot', __FILE__)
 end
 
 Bundler.require(*Rails.groups)
-require "trix_editor"
+require "trix_editor_helper"
 
 module Dummy
   class Application < Rails::Application

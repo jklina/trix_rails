@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    trix_editor (0.0.1)
+    trix_editor_helper (0.0.1)
       rails (>= 4.1)
 
 GEM
@@ -115,7 +115,7 @@ PLATFORMS
 DEPENDENCIES
   minitest-rails
   pry-rails
-  trix_editor!
+  trix_editor_helper!
 
 BUNDLED WITH
    1.10.4
