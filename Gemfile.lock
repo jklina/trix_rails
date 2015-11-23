@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    trix_editor_helper (0.0.15)
+    trix_editor_helper (0.0.2)
       rails (>= 4.1)
 
 GEM
