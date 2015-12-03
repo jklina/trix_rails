@@ -1,14 +1,14 @@
-Trix Editor Helper
+Trix Rails
 ==================
 
-Trix Editor Helper allows you to easily incorporate the [Trix Editor](https://github.com/basecamp/trix "Trix Editor") from Basecamp into your Rails projects.
+Trix Rails allows you to easily incorporate the [Trix Editor](https://github.com/basecamp/trix "Trix Editor") from Basecamp into your Rails projects.
 
 Install
 -------
 
-Trix Editor Helper is a Rails engine tested against Rails >= 4.1 and Ruby >= 2.0.0. To get started, add Trix Editor Helper to your Gemfile and bundle install.
+Trix Rails is a Rails engine tested against Rails >= 4.1 and Ruby >= 2.0.0. To get started, add Trix Rails to your Gemfile and bundle install.
 
-`gem 'trix_editor_helper'`
+`gem 'trix_rails'`
 
 Make sure you then add the assets to your application's stylesheets:
 
